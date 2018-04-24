@@ -1,0 +1,8 @@
+[package]
+name = "actix-mvc-example"
+version = "0.1.0"
+authors = ["o0Ignition0o <jeremy.lempereur@gmail.com>"]
+
+[dependencies]
+actix = "0.5"
+actix-web = "0.5"
