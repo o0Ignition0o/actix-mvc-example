@@ -12,8 +12,12 @@ impl User {
     }
 }
 
+pub fn index(_: HttpRequest) -> String {
+    format!("Lots of users right here !")
+}
+
 pub fn count(_: HttpRequest) -> String {
     let users = vec![User::new("Jeremy".into(), 28), User::new("John".into(), 16)];
 
-    format!("Lots of users right here ! {} total.", users.len())
+    format!("{} users total.", users.len())
 }

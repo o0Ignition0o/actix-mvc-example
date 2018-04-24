@@ -1,2 +1,2 @@
-mod controller;
-pub mod router;
+pub mod config;
+mod user;
