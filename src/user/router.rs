@@ -1,24 +1,21 @@
 use actix_web::App;
-use status::controller;
+use user::controller;
 use global::router::{Routable, Route};
 
-pub struct StatusRouter {
+pub struct UserRouter {
     routes: Vec<Route>,
 }
 
-impl StatusRouter {
+impl UserRouter {
     pub fn new() -> Self {
-        let prefix = "/status";
-        StatusRouter {
-            routes: vec![
-                Route::new(format!("{}", prefix), controller::index),
-                Route::new(prefix.to_string() + "/service", controller::for_name),
-            ],
+        let prefix = "/user";
+        UserRouter {
+            routes: vec![Route::new(format!("{}", prefix), controller::count)],
         }
     }
 }
 
-impl Routable for StatusRouter {
+impl Routable for UserRouter {
     fn add_routes(self, app: App) -> App {
         let mut res_app = app;
         for Route { path, action } in self.routes {

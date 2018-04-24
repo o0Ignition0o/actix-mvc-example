@@ -32,6 +32,9 @@ Status is OK. Server is ready to go.
 
 $ curl http://127.0.0.1:8088/status/service?name=foo                             
 Status for service foo is Ok, everything is fine ! :)
+
+$ curl http://127.0.0.1:8088/user
+Lots of users right here ! 2 total.
 ```
 
 # Run the example : 
